@@ -57,7 +57,7 @@ async function handleAddList() {
   else {
    //find current user in table
    console.log('Finding user in table', usersData)
-   const userExistInTable = usersData.filter((u) =>{
+   const userExistInTable = usersData.find((u) =>{
       if(u.id == user.value.id) return true
    })
 
@@ -67,7 +67,7 @@ async function handleAddList() {
    }
    else{
       console.log('Users is not in table, creating')
-      createUser(user.value.id) 
+      createUser(user.value.id)
       createList(user.value.id, listName.value)
    }
    }

@@ -44,6 +44,7 @@ async function register(){
       email: email.value,
       password: password.value
    })
+   
    if(signUpError) handleError('User already registered.');console.log(signUpError)
 
    if(signUpData?.session){
