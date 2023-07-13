@@ -16,6 +16,11 @@
 
    <Loading v-else/>
 
+   
+   <p v-if="fetchState.moviesData?.results?.length == 0">No search results. Try to find something else.</p>
+
+
+
    <nuxt-link to="/"><Button>Go home</Button></nuxt-link>
 </template>
 
@@ -35,6 +40,10 @@ const fetchState  = reactive({
    error: null,
 }) 
 
+watch(fetchState, () => {
+   console.log(fetchState);
+})
+
 onMounted(async () => {
    handleSearch()
 })
@@ -47,7 +56,7 @@ watch(() => searchStore.searchValue, () => {
    }, 300)
 })
 
-async function handleSearch  (){
+async function handleSearch () {
    const fetchData = () => {
       return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -55,7 +64,7 @@ async function handleSearch  (){
          {
          params: {
             query: searchStore.searchValue,
-            include_adult: true
+            include_adult: false,
          },
          headers: {
             accept: 'application/json',
