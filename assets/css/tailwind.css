@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+   font-family: SFProText;
+   src: url(../fonts/SFProText.ttf);
+}
+
+*{
+   font-family: "SFProText", sans-serif;
+}
+
+.bg-gradient{
+background: rgb(255,0,0);
+background: -moz-radial-gradient(circle, rgba(255,0,0,0.7931547619047619) 0%, rgba(255,255,255,0) 100%);
+background: -webkit-radial-gradient(circle, rgba(255,0,0,0.7931547619047619) 0%, rgba(255,255,255,0) 100%);
+background: radial-gradient(circle, rgba(255,0,0,0.7931547619047619) 0%, rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#ffffff",GradientType=1);
+}
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+   scrollbar-width: auto;
+   scrollbar-color: #3e3e3e #0d0d0d;
+ }
+
+ /* Chrome, Edge, and Safari */
+ *::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+
+ }
+
+ *::-webkit-scrollbar-track {
+   background: #00000000;
+ }
+
+ *::-webkit-scrollbar-thumb {
+   background-color: #3e3e3e;
+   border-radius: 10px;
+ }
