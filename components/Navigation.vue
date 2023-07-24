@@ -13,13 +13,13 @@
             <template #title>Home</template>
          </NavTab>
 
-         <NavTab link="/register">
+         <NavTab link="/about">
             <template #icon>
                <img src="../assets/friends.svg" class="w-[24px] h-[24px]">
             </template>
-            <template #title>Register new account</template>
+            <template #title>About</template>
          </NavTab>
-   
+         
 
          <hr class="border-[#1E1E1E] my-[32px]">
 
